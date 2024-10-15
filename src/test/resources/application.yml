@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: product-service
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    defer-datasource-initialization: true

@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: configuration
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: configuration.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;
+
+  - changeSet:
+      id: products
+      author: joalvarez
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: products.sql
+            relativeToChangeLogFile: true
+            endDelimiter: ;

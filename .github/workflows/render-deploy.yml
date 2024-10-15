@@ -1,0 +1,17 @@
+name: Deploy to Render
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: false
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger deploy hook on Render
+        run: |
+          curl -POST https://api.render.com/deploy/srv-cs7c565umphs73a499r0?key=H7oICCPZoec

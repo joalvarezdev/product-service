@@ -1,0 +1,22 @@
+package {{package}}.data.dto;
+
+import {{package}}.data.dto.general.BaseDTO;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+{{#if (eq entityId "UUID")}}
+
+import java.util.UUID;
+{{/if}}
+
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+public class {{className}} implements BaseDTO {
+    private {{entityId}} id;
+
+    public {{entityId}} getId() {
+        return id;
+    }
+
+    public void setId({{entityId}} id) {
+        this.id = id;
+    }
+}

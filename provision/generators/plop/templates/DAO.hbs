@@ -1,0 +1,19 @@
+package {{package}}.data.dao;
+
+import {{package}}.data.domain.{{name}};
+import {{package}}.data.repository.{{name}}Repository;
+import {{package}}.data.dao.general.BaseDAO;
+
+import org.springframework.stereotype.Component;
+{{#if (eq entityId "UUID")}}
+
+import java.util.UUID;
+{{/if}}
+
+@Component
+public class {{className}} extends BaseDAO<{{name}}Repository, {{name}}, {{entityId}}> {
+
+    public {{className}}({{name}}Repository repository) {
+        super(repository);
+    }
+}

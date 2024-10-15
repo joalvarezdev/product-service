@@ -1,0 +1,21 @@
+package {{package}}.data.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+{{#if (eq entityId "UUID")}}
+
+import java.util.UUID;
+{{/if}}
+
+@Entity(name = "{{pluralName}}")
+public class {{className}} {
+    @Id private {{entityId}} id;
+
+    public {{entityId}} getId() {
+        return id;
+    }
+
+    public void setId({{entityId}} id) {
+        this.id = id;
+    }
+}
